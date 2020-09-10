@@ -32,3 +32,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     'destroy'    => 'api.posts.destroy',
 ]);
 //Estas son las rutas de api que asi deben de estar configurados
+
+
+/**
+ *
+ * Estas son las rutas para la configuracion de la Api de Aprendible
+ *
+ */
+
+Route::get('articles/{article}', 'Api\ArticleController@show')->name('api.v1.articles.show');
+
+Route::get('articles', 'Api\ArticleController@index')->name('api.v1.articles.index');
